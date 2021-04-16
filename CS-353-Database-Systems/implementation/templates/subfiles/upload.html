@@ -1,0 +1,16 @@
+{% extends "developer.html" %}
+
+{% block body %}
+    {% from "includes/formhelpers.html" import render_field %}
+    <h3>Upload An App</h3>
+    <hr>
+
+    <form method="post">
+        {{ render_field(form.appName, class="form-control") }}
+        {{ render_field(form.ageRestriction, class="form-control") }}
+        {{ render_field(form.size, class="form-control") }}
+        {{ render_field(form.osVersion, class="form-control") }}
+        {{ render_field(form.category, class="form-control") }}
+        <button type="submit" class="btn btn-primary">Upload App</button>
+    </form>
+{% endblock %}
